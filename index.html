@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script> 
+        function cambiarContenido() {
+        let div = document.getElementById('miDiv');
+            div.innerHTML = 'Contenido cambiado';
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="miDiv">Contenido original</div>
+    <button onclick="cambiarContenido()">Cambiar Contenido</button>
+
+    <div id="sumar">Suma
+
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <div id="resultado"></div>
+    </div>
+    <button onclick="sumar()">Sumar</button>
+    <script>
+        function sumar() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var resultado = num1 + num2;
+            document.getElementById('resultado').innerText = 'Resultado: ' + resultado;
+        }
+    </script>
+
+</body>
+</html>
